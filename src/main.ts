@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   const config = new DocumentBuilder()
   .setTitle("API Workshop")
   .setDescription("API para calculo da média do senai e busca dos mandamentos do clube de programação")
